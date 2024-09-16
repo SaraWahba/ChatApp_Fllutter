@@ -1,4 +1,5 @@
 import 'package:chat_app/constants/constant.dart';
+import 'package:chat_app/pages/chat_page.dart';
 import 'package:chat_app/pages/signup_page.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text_form_field.dart';
@@ -105,6 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 15,
                         ),
                         CustomTextFormField(
+                            obscureText : true ,
                             validator: (data) {
                               if (data!.isEmpty) {
                                 return 'No filed Empty';
@@ -136,7 +138,8 @@ class _LoginPageState extends State<LoginPage> {
                                         fontFamily: 'Merriweather',
                                         color: Colors.black,
                                       ),
-                                    )));
+                                    ),),);
+                                Navigator.pushNamed(context, ChatPage.id , arguments : email);
                               } on FirebaseAuthException catch (e) {
                                 if (e.code == 'user-not-found') {
                                   showSnackBar(context, "No user found for that email.");
@@ -205,7 +208,7 @@ class _LoginPageState extends State<LoginPage> {
   void showSnackBar(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        backgroundColor: Color(0xFFFBA6AB),
+        backgroundColor: kColor,
         content: Text(
           message,
           style: TextStyle(

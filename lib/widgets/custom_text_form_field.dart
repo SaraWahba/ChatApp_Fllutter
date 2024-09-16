@@ -25,6 +25,11 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: TextStyle(
+        color: Colors.black,
+        fontFamily: 'Merriweather',
+        fontSize: 18,
+      ),
       controller: controller,
       validator: validator,
       // textAlign: TextAlign.center,
@@ -42,7 +47,7 @@ class CustomTextFormField extends StatelessWidget {
         // contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 12),
         border: buildBorder(),
         enabledBorder: buildBorder(color: Colors.black),
-        focusedBorder: buildBorder(color: Color(0xFFFBA6AB),),
+        focusedBorder: buildBorder(color: Color(0xFFFF8C93),),
         suffixIcon: suffixIcon,
       ),
     );

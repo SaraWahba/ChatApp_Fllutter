@@ -42,7 +42,7 @@ class CustomButtonState extends State<CustomButton> {
           decoration: BoxDecoration(
           gradient: LinearGradient(
                 colors: [
-                  Color(0xFF93E3CF),
+                  Color(0xFF179872),
                   Color(0xFFFBA6AB),
                 ]
             ),

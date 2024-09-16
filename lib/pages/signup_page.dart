@@ -204,7 +204,7 @@ class _SignUpPageState extends State<SignUpPage> {
   void showSnackBar(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        backgroundColor: Color(0xFFFBA6AB),
+        backgroundColor: kColor,
         content: Text(
           message,
           style: TextStyle(
